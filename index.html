@@ -1,26 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARDS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SHAPES</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+     <style>
+        :root {
+            --border-color: rgba(0, 255, 13, 0.7); /* Green with alpha */
+            --shadow-color: rgba(124, 124, 124, 0.5); /* Semi-transparent grey */
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            overflow: hidden;
+            perspective: 800px; /* Add perspective */
+        }
+
+        .container {
+            position: absolute;
+            height: 90%;
+            top: 50%; /* Center vertically */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center with transform */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            position: absolute;
+            background: transparent;
+            width: calc(var(--i) * 2.5vmin);
+            aspect-ratio: 1;
+            border: 5px solid var(--border-color);
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            transform: rotateX(70deg) translateZ(50px);
+            box-shadow: 0 0 15px var(--shadow-color), inset 0 0 15px var(--shadow-color);
+            animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+        }
+
+        @keyframes animate {
+            0%, 100% {
+                transform: rotateX(70deg) translateZ(50px);
+                filter: hue-rotate(0);
+            }
+            50% {
+                transform: rotateX(70deg) translateZ(50px) translateY(-50vmin); /* Corrected typo and used transform */
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style> 
 </head>
 <body>
-    <div id="card1" class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUbI6xZnUf_u_AA_RWepIXWr-GHb1bZ-nHow&s" width="226" height="296">
-    </div>
-    <div id="card2" class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTED5HDE09I9dC8YG38_BM2aUIfQDr8_UMGTg&s" alt="">
-    </div>
-    <div id="card3" class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvW3W2uPYypLo_Xr0rAqR1ZWyOv2_0y_K07A&s" alt="">
-    </div>
-    <div id="card4" class="card">
-        <img src="https://play-lh.googleusercontent.com/eftfcMyaaRruAiGPgVZ4rkBsKU_s6qNswWuIOpF7PCNcsd2pY1vhkYnYEKdszfLfTu4=w240-h480-rw" alt="">
-    </div>
+    <div class="container">
+        <div class="circle" style="--i:0;"></div>
+        <div class="circle" style="--i:1;"></div>
+        <div class="circle" style="--i:2;"></div>
+        <div class="circle" style="--i:3;"></div>
+        <div class="circle" style="--i:4;"></div>
+        <div class="circle" style="--i:5;"></div>
+        <div class="circle" style="--i:6;"></div>
+        <div class="circle" style="--i:7;"></div>
+        <div class="circle" style="--i:8;"></div>
+        <div class="circle" style="--i:9;"></div>
+        <div class="circle" style="--i:10;"></div>
+        <div class="circle" style="--i:11;"></div>
+        <div class="circle" style="--i:12;"></div>
+        <div class="circle" style="--i:13;"></div>
+        <div class="circle" style="--i:14;"></div>
+        <div class="circle" style="--i:15;"></div>
+        <div class="circle" style="--i:16;"></div>
+        <div class="circle" style="--i:17;"></div>
+        <div class="circle" style="--i:18;"></div>
+        <div class="circle" style="--i:19;"></div>
+        <div class="circle" style="--i:20;"></div>
+        <div class="circle" style="--i:21;"></div>
+        <div class="circle" style="--i:22;"></div>
+        <div class="circle" style="--i:23;"></div>
+        <div class="circle" style="--i:24;"></div>
+        <div class="circle" style="--i:25;"></div>
+        <div class="circle" style="--i:26;"></div>
+        <div class="circle" style="--i:27;"></div>
+        <div class="circle" style="--i:28;"></div>
+        <div class="circle" style="--i:29;"></div>
+        <div class="circle" style="--i:30;"></div>
+        <div class="circle" style="--i:31;"></div>
+        <div class="circle" style="--i:32;"></div>
+        <div class="circle" style="--i:33;"></div>
+        <div class="circle" style="--i:34;"></div>
+        <div class="circle" style="--i:35;"></div>
+        <div class="circle" style="--i:36;"></div>
+        <div class="circle" style="--i:37;"></div>
+        <div class="circle" style="--i:38;"></div>
+        <div class="circle" style="--i:39;"></div>
+        <div class="circle" style="--i:40;"></div>
+        <div class="circle" style="--i:41;"></div>
+        <div class="circle" style="--i:42;"></div>
+        <div class="circle" style="--i:43;"></div>
+        <div class="circle" style="--i:44;"></div>
+        <div class="circle" style="--i:45;"></div>
+        <div class="circle" style="--i:46;"></div>
+        <div class="circle" style="--i:47;"></div>
+        <div class="circle" style="--i:48;"></div>
+        <div class="circle" style="--i:49;"></div>
+        <div class="circle" style="--i:50;"></div>
+
+        </div>
 </body>
 </html>
-
-
